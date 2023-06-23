@@ -68,14 +68,25 @@ buttons.forEach((button) => {
                 result.textContent = res;
             }
         }
+
         else if (keyPressed == '='){
             res = operate(parseInt(num2), parseInt(num), op);
             num2 = res;
             result.textContent = res;
         }
+        
+        else if (keyPressed == "clear"){
+            result.textContent = 0;
+            num = "";
+            op = "";
+            num2 = "";
+            res = 0;
+        }
+
         else{
             num += keyPressed;
             result.textContent = num;
         }
+
     });
 });
